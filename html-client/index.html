@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>HTML Client Login</h1>
+    <a id="login" href="#">Login with Kerliix</a>
+
+    <script>
+      const CLIENT_ID = 'HTML_CLIENT';
+      const REDIRECT_URI = 'http://localhost:7000/dashboard.html';
+      const AUTH_PAGE = 'http://localhost:5174/authorize';
+      document.getElementById('login').href = `${AUTH_PAGE}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=code&scope=openid profile email`;
+    </script>
+  </body>
+</html>
